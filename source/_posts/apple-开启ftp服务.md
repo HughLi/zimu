@@ -51,7 +51,13 @@ tar -Jxv -f **.tar.xz
 umount /dev/sdb1
 umount /dev/sdb2
 
-2. 写入 
+2. 格式化
+➜  ~ mkfs.[文件格式] [设备路径]
+
+mkfs         mkfs.cramfs  mkfs.ext3    mkfs.fat     mkfs.msdos
+mkfs.bfs     mkfs.ext2    mkfs.ext4    mkfs.minix   mkfs.vfat
+
+3. 写入 
 
 sudo dd bs=4M if=2013-09-25-wheezy-raspbian.img of=/dev/sdb
 
